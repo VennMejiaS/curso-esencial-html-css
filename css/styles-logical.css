@@ -29,78 +29,290 @@
 
 :root{
     font-size: 18px;
-    --gray30: #212121;
-    --gray20: #212429;
-    --gray10: #616161;
+    --white30: white;
+    --white20: #a5a3a5;
+    --white10: #3a3539;
 }
 body {
-    color: var(--gray30);
-    font-family: 'Roboto', sans-serif;
+    color: var(--white30);
+    font-family: 'Nunito', sans-serif;
+    background: #251f24;
+    margin:0;
+   /* writing-mode: vertical-lr;*/
+   /* margin: 10px 10px 10px 10px;*/
     /*font-family: charter;*/
 }
 
 a {
-    color: var(--gray30);
+    color: var(--white30);
 }
- header{
-    /*--gray10: red; Para cambiar la variable solo en alguna parte del proyecto*/
+.header{
+   /* position: sticky;
+    inset-block-start: -45px;*/
+    /*background: red;
+    position: absolute;
+    position: fixed;
+    inset: 0;
+    inset: 50px;
+    inset-block: 50px;
+    block-size: 500px;
+    inline-size: 500px;*/
+}
+.header-content{
+    /*position: relative;
+    inset-block-start: 65px;*/
+    padding-inline: 20px;
+}
+header{
+    margin-block-start: 20px;
+    /*--white10: red; Para cambiar la variable solo en alguna parte del proyecto*/
     font-size: 14px;
-    color: var(--gray10);
+    color: var(--white);
+    /*position: absolute;*/
+    /*top*/
+    /*inset-block-start: 0;*/
+    /*button*/
+    /*inset-inline-end: ;*/
+    /*left*/
+    /*inset-inline-start: -208px;*/
+    /*right*/
+   /* inset-inline-end: ;*/
+   /*inline-size: 188px;*/
  }
 
- header a {
-    color: var(--gray10);
+header li{
+    color: var(--white20);
+ }
+header a {
+    color: var(--white20);
     text-decoration: none;
  }
 
- header a:hover{
-    color: var(--gray30);
+header a:hover{
+    color: var(--white30);
  }
 
  nav details summary {
     font-weight: bold;
  }
-
+h1, h2, h3{
+   font-weight: normal;
+}
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     /*font-size: 3.75em resultado de 60px/16 px*/
-
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+    /*text-align: start;
+    text-align: justify;
+    text-decoration: underline;*/
 }
 h2 {
     font-size: 2em;
+    margin-block: 40px;
+
 }
  h3 {
     /*font-size: 24px;*/
     font-size: 1.5em;
+    font-weight: 600;
+    margin-block: 16px;
  }
 
- pre {
-    background: #FEC62E;
- }
+pre {
+    background: var(--white10);
+    padding:40px;
+    overflow: auto;
+    border-radius: 8px;
+    /*border-left: 5px solid blue;
+    border-inline-start: 5px solid white;
+    border-block-end: 20px solid pink;
+    border-block-start-color: blue;*/
+    border:10px solid #5551ff;
+    box-shadow: -10px 10px 0 0 #abaaf6;
+    /*margin-block-end: 200px;
+    border-radius: 50%;
+    inline-size: 400px;
+    block-size: 400px;
+    border-start-start-radius: 60px;*/
+}
  
- .hero{
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent), url('../images/pattern.png');
+p{
+    color: var(--white20);
+   
+}
+
+.hero{
+    background: linear-gradient(148deg, #314755 34.50%, #26A0DA 82.40%);
+    /*background-image: linear-gradient(to top, rgba(255, 255, 255, 0.3), transparent), url('../images/pattern.png');*/
     /*background-repeat: no-repeat;
     background-position: left 50px top -50px;
     background-size: cover;*/
-    height: 350px;
+    block-size: 50px;
  }
-
 .section-content{
     counter-reset: titleList;
+
 }
 
- .section-content h3{
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+    /*max-width: 100%;*/
+}
+
+.section-content li{
+    line-height: 24px;
+    color: #A5A3A5;
+ }
+
+ .section-content ul li {
+    margin-bottom: 16px;
+ }
+
+.section-content h3{
     counter-increment: titleList;
  }
 
- .section-content h3::before{
-    content: counter(titleList, decimal);
+.section-content h3::before{
+    content: counter(titleList, decimal) '. ';
  }
- .section-content h3::after{
+ /*.section-content h3::after{
     content: '';
     width: 32px;
     height: 4px;
-    background: var(--gray30);
+    background: var(--white30);
     display: inline-block;
- }
+ }*/
+hr{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.20);;
+  }
+
+blockquote{
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white10);
+    border-radius: 8px; 
+    padding-inline-end: 24px;
+    padding-inline-start: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    line-height: 32px;
+    font-size: 24px;
+
+  }
+
+blockquote{
+    color: var(--white30);
+  }
+
+.main hr{
+    display: none;
+  }
+
+.main{
+    /*border: 1px solid red;*/
+  }
+
+.wrapper{
+    /*border: 1px solid yellow;*/
+    max-inline-size: 902px;
+    /*block-size: 100px;*/
+    margin: auto;
+    /*overflow: auto:*/
+  }
+
+.main-content{
+    /*border: 1px solid blue;*/
+    padding-inline: 16px;
+  }
+
+.slider{
+    /*border: 1px solid red;*/
+  }
+
+.slider-container{
+    /*block-size: 100px;*/
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+    /*border: 1px solid purple;*/
+  }
+
+.video{
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+   /* border: 1px solid blue*/
+  } 
+
+.slider-buller-list{
+    /*border: 1px solid yellow;*/
+    text-align: center;
+    margin-block-start: 10px;
+
+}
+
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+.form input{
+    width: 100%;
+    border: 1px solid var(--white30);
+    box-sizing: border-box;
+    background: #251f24;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-end: 24px;
+  }
+
+.form input::-webkit-input-placeholder{
+    color: var(--white20)
+  }
+
+.form input [type="submit"]{
+    background: #157EFB;
+    border: none;
+  }
+
+@media screen and (min-width: 1366px){
+    .hero{
+        block-size: 350px;
+}
+
+    .header{
+        position: sticky;
+        inset-block-start: -45px;
+       
+    }
+    .header-content{
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+     header{
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        inline-size: 188px;
+     }
+     h1 {
+        font-size: 60px;
+        margin-block-start: 64px;   
+}
+}
